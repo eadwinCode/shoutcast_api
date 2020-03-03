@@ -1,6 +1,6 @@
 # Shoutcast Radio Directory API
 
-A Python module for interacting with the shoutcast radio directory api. For Python 3 only.
+A Python module for interacting with the shoutcast radio directory api. For Python >= 3.
 
 ### Getting started
 

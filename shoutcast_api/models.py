@@ -57,3 +57,14 @@ class Genre:
 class GenreList:
     def __init__(self, genres: List[Genre]):
         self.genres = genres
+
+
+class Track:
+    def __init__(self, track):
+        self.stream_url = track.get('location')
+        self.title = track.get('title')
+
+
+class TrackList:
+    def __init__(self, tracks: List[Track]):
+        self.tracks = tracks
