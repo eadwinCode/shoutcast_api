@@ -8,6 +8,7 @@ class Station:
         self.br = station.get('br')
         self.genre = station.get('genre')
         self.ct = station.get('ct')
+        self.mt = station.get('mt')
         self.lc = int(station.get('lc'))
         self.logo_url = station.get('logo')
 

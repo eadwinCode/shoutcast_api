@@ -7,16 +7,16 @@ from .utils import _build_url, station_xml_strip, station_json_strip
 def _handle_url_action_xml(url: str):
     stations: List[Station] = list()
     response = shoutcast_request.call_api_xml(url)
-    station_list = response.get('stationlist')
+    api_station_list = response.get('stationlist')
 
-    if not station_list.get('station'):
+    if not api_station_list.get('station'):
         return StationList(tunein=shoutcast_request.tuneins, stations=[])
 
-    stations = station_list.get('station')
-    if not isinstance(stations, list):
-        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_xml_strip(stations))])
+    api_stations = api_station_list.get('station')
+    if not isinstance(api_stations, list):
+        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_xml_strip(api_stations))])
 
-    for item in stations:
+    for item in api_stations:
         stations.append(Station(station_xml_strip(item)))
 
     return StationList(tunein=shoutcast_request.tuneins, stations=stations)
@@ -25,16 +25,16 @@ def _handle_url_action_xml(url: str):
 def _handle_url_action_json(url: str) -> StationList:
     stations: List[Station] = list()
     response = shoutcast_request.call_api_json(url)
-    station_list = response.get('stationlist')
+    api_station_list = response.get('stationlist')
 
-    if not station_list.get('station'):
+    if not api_station_list.get('station'):
         return StationList(tunein=shoutcast_request.tuneins, stations=[])
 
-    stations = station_list.get('station')
-    if not isinstance(stations, list):
-        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_json_strip(stations))])
+    api_stations = api_station_list.get('station')
+    if not isinstance(api_stations, list):
+        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_json_strip(api_stations))])
 
-    for item in stations:
+    for item in api_stations:
         stations.append(Station(station_json_strip(item)))
 
     return StationList(tunein=shoutcast_request.tuneins, stations=stations)

@@ -31,7 +31,8 @@ def station_xml_strip(station):
     item['genre'] = _get_all_genre(station)
     item['ct'] = station.get('@ct')
     item['lc'] = int(station.get('@lc'))
-    item['logo_url'] = station.get('@logo')
+    item['logo'] = station.get('@logo')
+    item['mt'] = station.get('@mt')
     return item
 
 
