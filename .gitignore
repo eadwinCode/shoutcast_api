@@ -43,12 +43,15 @@ coverage.xml
 # Translations
 *.mo
 *.pot
-.idea/
+
 # Django stuff:
 *.log
 
+
 # Sphinx documentation
 docs/_build/
+.idea/
+venv/
 
 # PyBuilder
 target/

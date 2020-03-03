@@ -2,12 +2,12 @@ from setuptools import find_packages
 from distutils.core import setup
 
 
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
 setup(name='shoutcast-api',
-      version='1.0.0',
+      version='1.0.2',
       description='Shoutcast Radio Directory API ',
       author='eadwinCode',
       author_email='ezeudoh.tochukwu@gmail.com',

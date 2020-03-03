@@ -1,7 +1,7 @@
 from shoutcast_api import shoutcast_request
 from typing import Tuple, AnyStr, List
 from .models import Station, StationList
-from .utils import _build_url, station_xml_strip
+from .utils import _build_url, station_xml_strip, station_json_strip
 
 
 def _handle_url_action_xml(url: str):
@@ -12,7 +12,11 @@ def _handle_url_action_xml(url: str):
     if not station_list.get('station'):
         return StationList(tunein=shoutcast_request.tuneins, stations=[])
 
-    for item in station_list.get('station'):
+    stations = station_list.get('station')
+    if not isinstance(stations, list):
+        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_xml_strip(stations))])
+
+    for item in stations:
         stations.append(Station(station_xml_strip(item)))
 
     return StationList(tunein=shoutcast_request.tuneins, stations=stations)
@@ -26,8 +30,12 @@ def _handle_url_action_json(url: str) -> StationList:
     if not station_list.get('station'):
         return StationList(tunein=shoutcast_request.tuneins, stations=[])
 
-    for item in station_list.get('station'):
-        stations.append(Station(item))
+    stations = station_list.get('station')
+    if not isinstance(stations, list):
+        return StationList(tunein=shoutcast_request.tuneins, stations=[Station(station_json_strip(stations))])
+
+    for item in stations:
+        stations.append(Station(station_json_strip(item)))
 
     return StationList(tunein=shoutcast_request.tuneins, stations=stations)
 

@@ -35,13 +35,30 @@ def station_xml_strip(station):
     return item
 
 
+def station_json_strip(station):
+    item = dict()
+    item.update(**station)
+    item['genre'] = _get_all_genre_from_json(station)
+    return item
+
+
 def _get_all_genre(station):
     genre = station.get('@genre')
     for i in range(2, 10):
         genre_ = station.get(f'@genre{i}')
         if not genre_:
             return genre
-        genre += f" {genre_}"
+        genre += f", {genre_}"
+    return genre
+
+
+def _get_all_genre_from_json(station):
+    genre = station.get('genre')
+    for i in range(2, 10):
+        genre_ = station.get(f'genre{i}')
+        if not genre_:
+            return genre
+        genre += f", {genre_}"
     return genre
 
 
