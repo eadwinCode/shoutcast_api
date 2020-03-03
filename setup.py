@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-import setuptools
+from setuptools import find_packages
 from distutils.core import setup
 
 
@@ -14,14 +13,20 @@ setup(name='shoutcast-api',
       author_email='ezeudoh.tochukwu@gmail.com',
       url='https://github.com/eadwinCode/shoutcast_api',
       license='MIT',
-      packages=setuptools.find_packages(),
+      packages=find_packages(),
       keywords='shoutcast radio api',
       long_description=long_description,
       long_description_content_type="text/markdown",
-      install_requires=['requests', 'xmltodict'],
       classifiers=[
+          'Development Status :: 5 - Production/Stable',
           "Programming Language :: Python :: 3",
           "License :: OSI Approved :: MIT License",
           "Operating System :: OS Independent",
+          'Topic :: Internet :: WWW/HTTP',
+      ],
+      zip_safe=False,
+      install_requires=[
+        'requests==2.23.0',
+        'xmltodict==0.12.0',
       ],
 )
