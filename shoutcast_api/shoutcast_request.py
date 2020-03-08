@@ -15,6 +15,14 @@ def call_api_xml(url):
     response = get(request_url)
     if response.status_code == 200:
         response_as_dict = xmltodict.parse(response.content)
+        api_response = response_as_dict.get('response')
+
+        if api_response:
+            api_status_code = int(api_response.get('statusCode'))
+            message = f"statusText:{api_response.get('statusText')}, " \
+                f"statusDetailText:{api_response.get('statusDetailText')}"
+            raise APIException(message, code=api_status_code)
+
         return response_as_dict
     raise APIException(response.content, code=response.status_code)
 
@@ -29,7 +37,9 @@ def call_api_json(url):
         api_status_code = int(api_response.get('statusCode'))
 
         if api_status_code != 200:
-            raise APIException(json_response.get('statusText'), code=api_status_code)
+            message = f"statusText:{api_response.get('statusText')}, " \
+                f"statusDetailText:{api_response.get('statusDetailText', '')}"
+            raise APIException(message, code=api_status_code)
 
         return json_response.get('response')['data']
     raise APIException(response.reason, code=response.status_code)
