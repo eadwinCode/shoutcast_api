@@ -8,12 +8,12 @@ def _handle_url_action_json(url):
     list_genre: List[Genre] = []
     response = shoutcast_request.call_api_json(url)
 
-    genrelist = response.get('genrelist')
+    genrelist = response.get("genrelist")
 
-    if not genrelist.get('genre'):
+    if not genrelist.get("genre"):
         return GenreList(list_genre)
 
-    for item in genrelist.get('genre'):
+    for item in genrelist.get("genre"):
         list_genre.append(Genre(item))
     return GenreList(list_genre)
 
@@ -28,12 +28,12 @@ def get_all_genres(k):
     url = f"legacy/genrelist?k={k}"
     response = shoutcast_request.call_api_xml(url)
 
-    genrelist = response.get('genrelist')
+    genrelist = response.get("genrelist")
 
-    if not genrelist or not genrelist.get('genre'):
+    if not genrelist or not genrelist.get("genre"):
         return GenreList(list_genre)
 
-    for item in genrelist.get('genre'):
+    for item in genrelist.get("genre"):
         list_genre.append(Genre(genre_xml_strip(item)))
     return GenreList(list_genre)
 
@@ -71,17 +71,17 @@ def get_genres_details_by_id(k, genre_id: int = None) -> Genre:
     :return: `class GenreList()`
     """
     if not genre_id:
-        raise Exception('id is required')
+        raise Exception("id is required")
 
     url = f"genre/secondary?k={k}&f=json&id={genre_id}"
     response = shoutcast_request.call_api_json(url)
 
-    genrelist = response.get('genrelist')
+    genrelist = response.get("genrelist")
 
-    if not genrelist.get('genre'):
+    if not genrelist.get("genre"):
         return Genre({})
 
-    return Genre(genrelist.get('genre'))
+    return Genre(genrelist.get("genre"))
 
 
 def get_genres_by_sub_genres(k, haschildren: bool = False):
@@ -97,8 +97,8 @@ def get_genres_by_sub_genres(k, haschildren: bool = False):
 
     url = f"genre/secondary?k={k}&f=json"
     if haschildren:
-        url += '&haschildren=true'
+        url += "&haschildren=true"
     else:
-        url += '&haschildren=false'
+        url += "&haschildren=false"
 
     return _handle_url_action_json(url)

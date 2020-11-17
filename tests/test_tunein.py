@@ -1,6 +1,9 @@
 from unittest import TestCase
 from shoutcast_api.tunein import (
-    Track, TrackList, get_stations_stream_url, tunein_to_station
+    Track,
+    TrackList,
+    get_stations_stream_url,
+    tunein_to_station,
 )
 from shoutcast_api.shoutcast_request import tuneins
 

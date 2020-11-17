@@ -11,10 +11,10 @@ def get_stations_stream_url(station_id: int) -> TrackList:
     """
     tracks: List[Track] = []
     response = call_api_tunein(station_id)
-    playlist = response.get('playlist')
-    api_track_list = playlist.get('trackList')
+    playlist = response.get("playlist")
+    api_track_list = playlist.get("trackList")
 
-    api_tracks = api_track_list.get('track', [])
+    api_tracks = api_track_list.get("track", [])
 
     if not isinstance(api_tracks, list):
         return TrackList([Track(api_tracks)])
