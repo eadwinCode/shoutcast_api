@@ -11,7 +11,7 @@ tuneins = [Tunein('/sbin/tunein-station.pls'), Tunein('/sbin/tunein-station.m3u'
 
 
 def call_api_xml(url):
-    request_url = f"{base_url}{url}"
+    request_url = "{}{}".format(base_url, url)
     response = get(request_url)
     if response.status_code == 200:
         response_as_dict = xmltodict.parse(response.content)
@@ -19,8 +19,9 @@ def call_api_xml(url):
 
         if api_response:
             api_status_code = int(api_response.get('statusCode'))
-            message = f"statusText:{api_response.get('statusText')}, " \
-                f"statusDetailText:{api_response.get('statusDetailText')}"
+            message = "statusText:{}, statusDetailText:{}".format(
+                api_response.get('statusText'), api_response.get('statusDetailText')
+            )
             raise APIException(message, code=api_status_code)
 
         return response_as_dict
@@ -28,7 +29,7 @@ def call_api_xml(url):
 
 
 def call_api_json(url):
-    request_url = f"{base_url}{url}"
+    request_url = "{}{}".format(base_url, url)
     response = get(request_url)
     if response.status_code == 200:
         json_response = json.loads(response.content.decode('utf-8'))
@@ -37,8 +38,9 @@ def call_api_json(url):
         api_status_code = int(api_response.get('statusCode'))
 
         if api_status_code != 200:
-            message = f"statusText:{api_response.get('statusText')}, " \
-                f"statusDetailText:{api_response.get('statusDetailText', '')}"
+            message = "statusText:{}, statusDetailText:{}".format(
+                api_response.get('statusText'), api_response.get('statusDetailText', '')
+            )
             raise APIException(message, code=api_status_code)
 
         return json_response.get('response')['data']
