@@ -23,7 +23,7 @@ def _handle_url_action_xml(url: str):
 
 
 def _handle_url_action_json(url: str) -> StationList:
-    stations: List[Station] = list()
+    stations = list()
     response = shoutcast_request.call_api_json(url)
     api_station_list = response.get('stationlist')
 
