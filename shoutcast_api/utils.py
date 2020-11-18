@@ -1,7 +1,6 @@
-from typing import Tuple
 
 
-def _build_url(limit: (int, Tuple), **kwargs) -> str:
+def _build_url(limit: (int, tuple), **kwargs) -> str:
     url = ""
     if isinstance(limit, tuple):
         x, y = limit

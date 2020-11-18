@@ -1,15 +1,14 @@
-from typing import List
-from .models import Track, TrackList, Tunein
+from .models import Track, TrackList
 from .shoutcast_request import call_api_tunein, call_api_tunein_any
 
 
-def get_stations_stream_url(station_id: int) -> TrackList:
+def get_stations_stream_url(station_id) -> TrackList:
     """
     Get station streaming url as List[Track]
     :param station_id: shoutcast station id
     :return: class `TrackList`
     """
-    tracks: List[Track] = []
+    tracks= []
     response = call_api_tunein(station_id)
     playlist = response.get('playlist')
     api_track_list = playlist.get('trackList')
@@ -25,7 +24,7 @@ def get_stations_stream_url(station_id: int) -> TrackList:
     return TrackList(tracks)
 
 
-def tunein_to_station(base: Tunein, station_id: int) -> str:
+def tunein_to_station(base, station_id: int) -> str:
     """
 
     :param base: value is taken from the tunein node and based on the playlist format required

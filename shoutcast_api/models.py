@@ -1,5 +1,3 @@
-from typing import List
-
 
 class Station:
     def __init__(self, station):
@@ -25,7 +23,7 @@ class Tunein:
 
 
 class StationList:
-    def __init__(self, stations: List[Station], tunein: List[Tunein]):
+    def __init__(self, stations, tunein):
         self.station = stations
         self.tunein = tunein
 
@@ -55,7 +53,7 @@ class Genre:
 
 
 class GenreList:
-    def __init__(self, genres: List[Genre]):
+    def __init__(self, genres):
         self.genres = genres
 
 
@@ -66,5 +64,5 @@ class Track:
 
 
 class TrackList:
-    def __init__(self, tracks: List[Track]):
+    def __init__(self, tracks):
         self.tracks = tracks
