@@ -1,5 +1,7 @@
 # Shoutcast Radio Directory API
 
+[![Actions Status](https://github.com/eadwinCode/shoutcast_api/workflows/Build%20and%20Test/badge.svg)](https://github.com/eadwinCode/shoutcast_api/actions)
+
 A Python module for interacting with the shoutcast radio directory api. For Python >= 3.
 
 ### Getting started
