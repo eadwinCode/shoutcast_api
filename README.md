@@ -1,6 +1,6 @@
 # Shoutcast Radio Directory API
 
-[![Build Status](https://travis-ci.org/eadwinCode/shoutcast_api.svg?branch=master)](https://travis-ci.org/eadwinCode/shoutcast_api)
+[![Actions Status](https://github.com/eadwinCode/shoutcast_api/workflows/Build%20and%20Test/badge.svg)](https://github.com/eadwinCode/shoutcast_api/actions)
 
 A Python module for interacting with the shoutcast radio directory api. For Python >= 3.
 
