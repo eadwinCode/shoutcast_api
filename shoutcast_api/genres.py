@@ -1,11 +1,11 @@
 from shoutcast_api import shoutcast_request
-from typing import Tuple, AnyStr, List
+from typing import List
 from .models import Genre, GenreList
-from .utils import _build_url, genre_xml_strip
+from .utils import genre_xml_strip
 
 
 def _handle_url_action_json(url):
-    list_genre: List[Genre] = []
+    list_genre = []
     response = shoutcast_request.call_api_json(url)
 
     genrelist = response.get('genrelist')
