@@ -8,7 +8,7 @@ def get_stations_stream_url(station_id) -> TrackList:
     :param station_id: shoutcast station id
     :return: class `TrackList`
     """
-    tracks= []
+    tracks = []
     response = call_api_tunein(station_id)
     playlist = response.get('playlist')
     api_track_list = playlist.get('trackList')
