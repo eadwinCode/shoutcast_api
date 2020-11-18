@@ -1,11 +1,11 @@
 import os
 from unittest import TestCase
 from shoutcast_api.stations import (
-    StationList, Station, get_random_station, get_stations_keywords, get_stations_by_genre,
+    StationList, get_random_station, get_stations_keywords, get_stations_by_genre,
     get_stations_bitrate_or_genre_id, get_stations_by_now_playing, get_top_500
 )
 
-api_key = os.getenv('api_key')
+api_key = os.getenv('SHOUTCAST_API_KEY')
 
 
 class TestStations(TestCase):

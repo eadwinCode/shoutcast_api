@@ -5,7 +5,7 @@ from shoutcast_api.genres import (
  get_genres_by_sub_genres, GenreList, Genre, get_secondary_genres_json
 )
 
-api_key = os.getenv('api_key')
+api_key = os.getenv('SHOUTCAST_API_KEY')
 
 
 class TestGenre(TestCase):
