@@ -5,21 +5,21 @@ def _build_url(limit: (int, Tuple), **kwargs) -> str:
     url = ""
     if isinstance(limit, tuple):
         x, y = limit
-        url += f'&limit={x},{y}'
+        url += '&limit={},{}'.format(x, y)
     elif limit:
-        url += f'&limit={limit}'
+        url += '&limit={}'.format(limit)
 
     if kwargs.get('br'):
-        url += f"&br={kwargs.get('br')}"
+        url += "&br={}".format(kwargs.get('br'))
 
     if kwargs.get('mt'):
-        url += f"&mt={kwargs.get('mt')}"
+        url += "&mt={}".format(kwargs.get('mt'))
 
     if kwargs.get('genre_id'):
-        url += f"&genre_id={int(kwargs.get('genre_id'))}"
+        url += "&genre_id={}".format(int(kwargs.get('genre_id')))
 
     if kwargs.get('genre'):
-        url += f"&genre={int(kwargs.get('genre'))}"
+        url += "&genre={}".format(int(kwargs.get('genre')))
     return url
 
 
@@ -46,20 +46,20 @@ def station_json_strip(station):
 def _get_all_genre(station):
     genre = station.get('@genre')
     for i in range(2, 10):
-        genre_ = station.get(f'@genre{i}')
+        genre_ = station.get('@genre{}'.format(i))
         if not genre_:
             return genre
-        genre += f", {genre_}"
+        genre += ", {}".format(genre_)
     return genre
 
 
 def _get_all_genre_from_json(station):
     genre = station.get('genre')
     for i in range(2, 10):
-        genre_ = station.get(f'genre{i}')
+        genre_ = station.get('genre{}'.format(i))
         if not genre_:
             return genre
-        genre += f", {genre_}"
+        genre += ", {}".format(genre_)
     return genre
 
 

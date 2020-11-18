@@ -5,7 +5,7 @@ from .utils import _build_url, station_xml_strip, station_json_strip
 
 
 def _handle_url_action_xml(url: str):
-    stations: List[Station] = list()
+    stations = list()
     response = shoutcast_request.call_api_xml(url)
     api_station_list = response.get('stationlist')
 
@@ -23,7 +23,7 @@ def _handle_url_action_xml(url: str):
 
 
 def _handle_url_action_json(url: str) -> StationList:
-    stations: List[Station] = list()
+    stations = list()
     response = shoutcast_request.call_api_json(url)
     api_station_list = response.get('stationlist')
 
@@ -52,7 +52,7 @@ def get_top_500(k: AnyStr, limit: (int, Tuple) = None, **kwargs) -> StationList:
     :return: list of stations
     """
 
-    url = f'/legacy/Top500?k={k}'
+    url = '/legacy/Top500?k={}'.format(k)
     url += _build_url(limit=limit, **kwargs)
 
     return _handle_url_action_xml(url)
@@ -73,7 +73,7 @@ def get_stations_keywords(k, search: str, limit: (int, Tuple) = None, **kwargs) 
     if not search:
         raise Exception('Search query is required')
 
-    url = f"legacy/stationsearch?k={k}&search={search.replace(' ', '+').strip()}"
+    url = "legacy/stationsearch?k={}&search={}".format(k, search.replace(' ', '+').strip())
     url += _build_url(limit, **kwargs)
 
     return _handle_url_action_xml(url)
@@ -94,7 +94,9 @@ def get_stations_by_genre(k, genre: str, limit: (int, Tuple) = None, **kwargs) -
     if not genre:
         raise Exception('genre is required')
 
-    url = f"legacy/stationsearch?k={k}&search={genre.replace(' ', '+').strip()}"
+    url = "legacy/stationsearch?k={}&search={}".format(
+        k, genre.replace(' ', '+').strip()
+    )
     url += _build_url(limit, **kwargs)
 
     return _handle_url_action_xml(url)
@@ -115,7 +117,9 @@ def get_stations_by_now_playing(k, ct: str, limit: (int, Tuple) = None, **kwargs
     if not ct:
         raise Exception('genre is required')
 
-    url = f"station/nowplaying?k={k}&ct={ct.replace(' ', '+').strip()}&f=json"
+    url = "station/nowplaying?k={}&ct={}&f=json".format(
+        k, ct.replace(' ', '+').strip()
+    )
     url += _build_url(limit, **kwargs)
 
     return _handle_url_action_json(url)
@@ -138,7 +142,7 @@ def get_stations_bitrate_or_genre_id(k, br: int = 128,
     if not br and not genre_id:
         raise Exception('genre_id or br is required')
 
-    url = f"station/advancedsearch?k={k}&f=json"
+    url = "station/advancedsearch?k={}&f=json".format(k)
     url += _build_url(limit, br=br, genre_id=genre_id, **kwargs)
 
     return _handle_url_action_json(url)
@@ -158,7 +162,7 @@ def get_random_station(k, limit: (int, Tuple) = None, **kwargs):
           :return: `List[Stations]`
        """
 
-    url = f"station/randomstations?k={k}&f=json"
+    url = "station/randomstations?k={}&f=json".format(k)
     url += _build_url(limit, **kwargs)
 
     return _handle_url_action_json(url)

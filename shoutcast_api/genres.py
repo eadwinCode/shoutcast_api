@@ -1,11 +1,11 @@
 from shoutcast_api import shoutcast_request
-from typing import Tuple, AnyStr, List
+from typing import List
 from .models import Genre, GenreList
-from .utils import _build_url, genre_xml_strip
+from .utils import genre_xml_strip
 
 
 def _handle_url_action_json(url):
-    list_genre: List[Genre] = []
+    list_genre = []
     response = shoutcast_request.call_api_json(url)
 
     genrelist = response.get('genrelist')
@@ -24,8 +24,8 @@ def get_all_genres(k):
     :param k: API Dev ID
     :return: `class GenreList()`
     """
-    list_genre: List[Genre] = []
-    url = f"legacy/genrelist?k={k}"
+    list_genre = []
+    url = "legacy/genrelist?k={}".format(k)
     response = shoutcast_request.call_api_xml(url)
 
     genrelist = response.get('genrelist')
@@ -45,7 +45,7 @@ def get_primary_genres_json(k):
     :return: `class GenreList()`
     """
 
-    url = f"genre/primary?k={k}&f=json"
+    url = "genre/primary?k={}&f=json".format(k)
 
     return _handle_url_action_json(url)
 
@@ -58,8 +58,8 @@ def get_secondary_genres_json(k, parentid: int = 0):
     :return: `class GenreList()`
     """
 
-    url = f"genre/secondary?k={k}&f=json"
-    url += f"&parentid={parentid}"
+    url = "genre/secondary?k={}&f=json".format(k)
+    url += "&parentid={}".format(parentid)
     return _handle_url_action_json(url)
 
 
@@ -73,7 +73,7 @@ def get_genres_details_by_id(k, genre_id: int = None) -> Genre:
     if not genre_id:
         raise Exception('id is required')
 
-    url = f"genre/secondary?k={k}&f=json&id={genre_id}"
+    url = "genre/secondary?k={}&f=json&id={}".format(k, genre_id)
     response = shoutcast_request.call_api_json(url)
 
     genrelist = response.get('genrelist')
@@ -95,7 +95,7 @@ def get_genres_by_sub_genres(k, haschildren: bool = False):
     :return: `class GenreList()`
     """
 
-    url = f"genre/secondary?k={k}&f=json"
+    url = "genre/secondary?k={}&f=json".format(k)
     if haschildren:
         url += '&haschildren=true'
     else:
