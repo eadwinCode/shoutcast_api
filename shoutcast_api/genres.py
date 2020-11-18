@@ -24,7 +24,7 @@ def get_all_genres(k):
     :param k: API Dev ID
     :return: `class GenreList()`
     """
-    list_genre: List[Genre] = []
+    list_genre = []
     url = "legacy/genrelist?k={}".format(k)
     response = shoutcast_request.call_api_xml(url)
 
