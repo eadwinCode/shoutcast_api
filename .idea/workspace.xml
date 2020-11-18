@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b952744-456b-438a-b4a4-137bf9859ca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoutcast_api/genres.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/genres.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoutcast_api/stations.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/stations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoutcast_api/tunein.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/tunein.py" afterDir="false" />
-    </list>
+    <list default="true" id="6b952744-456b-438a-b4a4-137bf9859ca4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

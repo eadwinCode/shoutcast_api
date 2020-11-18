@@ -5,7 +5,7 @@ from .utils import _build_url, station_xml_strip, station_json_strip
 
 
 def _handle_url_action_xml(url: str):
-    stations: List[Station] = list()
+    stations = list()
     response = shoutcast_request.call_api_xml(url)
     api_station_list = response.get('stationlist')
 
