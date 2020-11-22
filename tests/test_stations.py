@@ -1,5 +1,5 @@
 import os
-from .test_base import BaseTestCase
+from .base import BaseTestCase
 from shoutcast_api.stations import (
     StationList, get_random_station, get_stations_keywords, get_stations_by_genre,
     get_stations_bitrate_or_genre_id, get_stations_by_now_playing, get_top_500

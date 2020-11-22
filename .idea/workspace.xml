@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b952744-456b-438a-b4a4-137bf9859ca4" name="Default Changelist" comment="" />
+    <list default="true" id="6b952744-456b-438a-b4a4-137bf9859ca4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoutcast_api/genres.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/genres.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoutcast_api/stations.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/stations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoutcast_api/tunein.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/tunein.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoutcast_api/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoutcast_api/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_stations.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_stations.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +52,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Shoutcast_api">
+  <component name="RunManager" selected="Python tests.Unittests for tests.test_stations.TestStations">
     <configuration name="Shoutcast_api" type="PythonConfigurationType" factoryName="Python">
       <module name="shoutcast_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,66 +105,66 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_stations.TestStations.test_get_top_500" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.test_stations.TestStations" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="shoutcast_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_stations.TestStations.test_get_top_500&quot;" />
+      <option name="_new_target" value="&quot;tests.test_stations.TestStations&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_tunein.TestTunein.test_get_stations_stream_url" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.test_stations.TestStations.test_get_stations_by_genre" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="shoutcast_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_tunein.TestTunein.test_get_stations_stream_url&quot;" />
+      <option name="_new_target" value="&quot;tests.test_stations.TestStations.test_get_stations_by_genre&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_tunein.TestTunein.test_tunein_to_station" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.test_stations.TestStations.test_get_top_500" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="shoutcast_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_tunein.TestTunein.test_tunein_to_station&quot;" />
+      <option name="_new_target" value="&quot;tests.test_stations.TestStations.test_get_top_500&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.Shoutcast_api" />
-      <item itemvalue="Python tests.Unittests for test_tunein.TestTunein.test_get_stations_stream_url" />
-      <item itemvalue="Python tests.Unittests for test_tunein.TestTunein.test_tunein_to_station" />
-      <item itemvalue="Python tests.Unittests for test_stations.TestStations.test_get_top_500" />
       <item itemvalue="Python tests.Unittests for test_stations.TestStations.test_get_stations_by_now_playing" />
       <item itemvalue="Python tests.Unittests for test_genres.TestGenre.test_get_secondary_genres_json" />
+      <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations.test_get_top_500" />
+      <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations" />
+      <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations.test_get_stations_by_genre" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations" />
+        <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations.test_get_stations_by_genre" />
+        <item itemvalue="Python tests.Unittests for tests.test_stations.TestStations.test_get_top_500" />
         <item itemvalue="Python tests.Unittests for test_genres.TestGenre.test_get_secondary_genres_json" />
         <item itemvalue="Python tests.Unittests for test_stations.TestStations.test_get_stations_by_now_playing" />
-        <item itemvalue="Python tests.Unittests for test_stations.TestStations.test_get_top_500" />
-        <item itemvalue="Python tests.Unittests for test_tunein.TestTunein.test_tunein_to_station" />
-        <item itemvalue="Python tests.Unittests for test_tunein.TestTunein.test_get_stations_stream_url" />
       </list>
     </recent_temporary>
   </component>
@@ -184,57 +191,98 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 06h 52m 57s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 06h 53m 44s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 06h 55m 04s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 07h 00m 39s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 07h 06m 46s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 07h 09m 09s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_top_500 - 2020.03.08 at 07h 09m 45s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_top_500" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_stations_by_now_playing - 2020.03.08 at 07h 11m 54s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_stations_by_now_playing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_stations_TestStations_test_get_stations_by_now_playing - 2020.03.08 at 07h 12m 21s.xml">
-      <configuration name="Unittests for test_stations.TestStations.test_get_stations_by_now_playing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_genres_TestGenre_test_get_secondary_genres_json - 2020.03.08 at 07h 21m 49s.xml">
-      <configuration name="Unittests for test_genres.TestGenre.test_get_secondary_genres_json" configurationId="tests" />
-    </history-entry>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1232" height="646" key="DebuggerActiveHint" timestamp="1606017162017">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1232" height="646" key="DebuggerActiveHint/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017162017" />
+    <state x="2020" y="131" width="1720" height="849" key="DiffContextDialog" timestamp="1606016552187">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2020" y="131" width="1720" height="849" key="DiffContextDialog/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606016552187" />
+    <state width="1866" height="331" key="GridCell.Tab.0.bottom" timestamp="1606017082433">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017082433" />
+    <state width="1866" height="331" key="GridCell.Tab.0.center" timestamp="1606017082433">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.0.center/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017082433" />
+    <state width="1866" height="331" key="GridCell.Tab.0.left" timestamp="1606017082433">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.0.left/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017082433" />
+    <state width="1866" height="331" key="GridCell.Tab.0.right" timestamp="1606017082433">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.0.right/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017082433" />
+    <state width="1866" height="331" key="GridCell.Tab.1.bottom" timestamp="1606017083176">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017083176" />
+    <state width="1866" height="331" key="GridCell.Tab.1.center" timestamp="1606017083175">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.1.center/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017083175" />
+    <state width="1866" height="331" key="GridCell.Tab.1.left" timestamp="1606017083175">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.1.left/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017083175" />
+    <state width="1866" height="331" key="GridCell.Tab.1.right" timestamp="1606017083175">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="331" key="GridCell.Tab.1.right/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606017083175" />
+    <state x="2606" y="168" width="537" height="777" key="VCS.ChangeListViewerDialog" timestamp="1606015375893">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2606" y="168" width="537" height="777" key="VCS.ChangeListViewerDialog/1920.0.1920.1080/0.31.1920.1049@1920.0.1920.1080" timestamp="1606015375893" />
     <state x="2553" y="257" width="654" height="596" key="find.popup" timestamp="1605726363277">
       <screen x="0" y="31" width="3840" height="1049" />
     </state>
     <state x="2553" y="257" width="654" height="596" key="find.popup/0.31.3840.1049@0.31.3840.1049" timestamp="1605726363277" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_stations.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_stations.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/shoutcast_api/stations.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/requests/sessions.py</url>
+          <line>515</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_stations_TestStations.coverage" NAME="Unittests for test_stations.TestStations Coverage Results" MODIFIED="1583173621020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_stations_TestStations_test_get_top_500.coverage" NAME="Unittests for test_stations.TestStations.test_get_top_500 Coverage Results" MODIFIED="1583647762016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_genres_TestGenre_test_get_secondary_genres_json.coverage" NAME="Unittests for test_genres.TestGenre.test_get_secondary_genres_json Coverage Results" MODIFIED="1583648498668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_genres_TestGenre.coverage" NAME="Unittests for test_genres.TestGenre Coverage Results" MODIFIED="1583172500582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_tunein_TestTunein_test_get_stations_stream_url.coverage" NAME="Unittests for test_tunein.TestTunein.test_get_stations_stream_url Coverage Results" MODIFIED="1583257251467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/shoutcast_api$test.coverage" NAME="test Coverage Results" MODIFIED="1583213936084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_tests_test_stations_TestStations_test_get_stations_by_genre.coverage" NAME="Unittests for tests.test_stations.TestStations.test_get_stations_by_genre Coverage Results" MODIFIED="1606017219904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_stations_TestStations_test_get_stations_by_now_playing.coverage" NAME="Unittests for test_stations.TestStations.test_get_stations_by_now_playing Coverage Results" MODIFIED="1583647916429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_stations_TestStations_test_get_stations_by_genre.coverage" NAME="Unittests for test_stations.TestStations.test_get_stations_by_genre Coverage Results" MODIFIED="1583173971593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_genres_TestGenre.coverage" NAME="Unittests for test_genres.TestGenre Coverage Results" MODIFIED="1583172500582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/shoutcast_api$test.coverage" NAME="test Coverage Results" MODIFIED="1583213936084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_tests_test_stations_TestStations_test_get_top_500.coverage" NAME="Unittests for tests.test_stations.TestStations.test_get_top_500 Coverage Results" MODIFIED="1606016596269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_stations_TestStations_test_get_random_station.coverage" NAME="Unittests for test_stations.TestStations.test_get_random_station Coverage Results" MODIFIED="1583173572327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_test_tunein_TestTunein_test_tunein_to_station.coverage" NAME="Unittests for test_tunein.TestTunein.test_tunein_to_station Coverage Results" MODIFIED="1583257675444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/shoutcast_api$Unittests_for_tests_test_stations_TestStations.coverage" NAME="Unittests for tests.test_stations.TestStations Coverage Results" MODIFIED="1606017261804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

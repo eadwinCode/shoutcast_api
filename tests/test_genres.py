@@ -1,5 +1,5 @@
 import os
-from .test_base import BaseTestCase
+from .base import BaseTestCase
 from shoutcast_api.genres import (
  get_all_genres, get_primary_genres_json, get_genres_details_by_id,
  get_genres_by_sub_genres, GenreList, Genre, get_secondary_genres_json
