@@ -4,9 +4,9 @@ from .models import Genre, GenreList
 from .utils import genre_xml_strip
 
 
-def _handle_url_action_json(url):
+def _handle_url_action_json(endpoint, session):
     list_genre = []
-    response = shoutcast_request.call_api_json(url)
+    response = shoutcast_request.call_api_json(endpoint, session=session)
 
     genrelist = response.get('genrelist')
 
@@ -18,15 +18,15 @@ def _handle_url_action_json(url):
     return GenreList(list_genre)
 
 
-def get_all_genres(k):
+def get_all_genres(k, session=None):
     """
     Get all the genres on SHOUTcast Radio Directory
     :param k: API Dev ID
     :return: `class GenreList()`
     """
     list_genre = []
-    url = "legacy/genrelist?k={}".format(k)
-    response = shoutcast_request.call_api_xml(url)
+    endpoint = "/legacy/genrelist?k={}".format(k)
+    response = shoutcast_request.call_api_xml(endpoint, session=session)
 
     genrelist = response.get('genrelist')
 
@@ -38,19 +38,19 @@ def get_all_genres(k):
     return GenreList(list_genre)
 
 
-def get_primary_genres_json(k):
+def get_primary_genres_json(k, session=None):
     """
     Get only the Primary Genres on SHOUTcast Radio Directory
     :param k: API Dev ID
     :return: `class GenreList()`
     """
 
-    url = "genre/primary?k={}&f=json".format(k)
+    endpoint = "/genre/primary?k={}&f=json".format(k)
 
-    return _handle_url_action_json(url)
+    return _handle_url_action_json(endpoint, session)
 
 
-def get_secondary_genres_json(k, parentid: int = 0):
+def get_secondary_genres_json(k, parentid: int = 0, session=None):
     """
     Get secondary genre list (if present) for a specified primary genre.
     :param parentid: Genreid of the primary genre. You can retrieve the entire genre set by passing parentid=0.
@@ -58,12 +58,12 @@ def get_secondary_genres_json(k, parentid: int = 0):
     :return: `class GenreList()`
     """
 
-    url = "genre/secondary?k={}&f=json".format(k)
-    url += "&parentid={}".format(parentid)
-    return _handle_url_action_json(url)
+    endpoint = "/genre/secondary?k={}&f=json".format(k)
+    endpoint += "&parentid={}".format(parentid)
+    return _handle_url_action_json(endpoint, session=session)
 
 
-def get_genres_details_by_id(k, genre_id: int = None) -> Genre:
+def get_genres_details_by_id(k, genre_id: int = None, session=None) -> Genre:
     """
     Get details such as Genre Name, Sub Genres (if its a primary genre), has children by passing the genre-id.
     :param genre_id: Input respective genre or sub-genre id.
@@ -73,8 +73,8 @@ def get_genres_details_by_id(k, genre_id: int = None) -> Genre:
     if not genre_id:
         raise Exception('id is required')
 
-    url = "genre/secondary?k={}&f=json&id={}".format(k, genre_id)
-    response = shoutcast_request.call_api_json(url)
+    endpoint = "/genre/secondary?k={}&f=json&id={}".format(k, genre_id)
+    response = shoutcast_request.call_api_json(endpoint, session=session)
 
     genrelist = response.get('genrelist')
 
@@ -84,7 +84,7 @@ def get_genres_details_by_id(k, genre_id: int = None) -> Genre:
     return Genre(genrelist.get('genre'))
 
 
-def get_genres_by_sub_genres(k, haschildren: bool = False):
+def get_genres_by_sub_genres(k, haschildren: bool = False, session=None):
     """
     Get genres based on their sub-genre availability at any node level in the genre hierarchy of SHOUTcast.
     :param haschildren: Input respective genre or sub-genre id.
@@ -95,10 +95,10 @@ def get_genres_by_sub_genres(k, haschildren: bool = False):
     :return: `class GenreList()`
     """
 
-    url = "genre/secondary?k={}&f=json".format(k)
+    endpoint = "/genre/secondary?k={}&f=json".format(k)
     if haschildren:
-        url += '&haschildren=true'
+        endpoint += '&haschildren=true'
     else:
-        url += '&haschildren=false'
+        endpoint += '&haschildren=false'
 
-    return _handle_url_action_json(url)
+    return _handle_url_action_json(endpoint, session)

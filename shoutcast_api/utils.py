@@ -1,3 +1,4 @@
+import requests
 from typing import Tuple
 
 
@@ -68,3 +69,9 @@ def genre_xml_strip(genre):
     item['name'] = genre.get('@name')
     item['count'] = int(genre.get('@count'))
     return item
+
+
+def _init_session(session):
+    if session is None:
+        session = requests.Session()
+    return session
