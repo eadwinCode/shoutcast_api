@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 
 setup(name='shoutcast-api',
-      version='1.0.7',
+      version='1.0.8',
       description='Shoutcast Radio Directory API ',
       author='eadwinCode',
       author_email='ezeudoh.tochukwu@gmail.com',
