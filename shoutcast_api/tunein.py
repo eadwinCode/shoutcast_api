@@ -7,6 +7,7 @@ def get_stations_stream_url(station_id: int, session=None) -> TrackList:
     """
     Get station streaming url as List[Track]
     :param station_id: shoutcast station id
+    :param session: request_cache session if available
     :return: class `TrackList`
     """
     tracks = []
@@ -31,6 +32,7 @@ def tunein_to_station(base: Tunein, station_id: int, session=None) -> str:
     :param base: value is taken from the tunein node and based on the playlist format required
     (as PLS, M3U and XSPF formats are supported)
     :param station_id: station id
+    :param session: request_cache session if available
     :return: str
     """
     return call_api_tunein_any(base, station_id, session=session)

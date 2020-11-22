@@ -1,4 +1,4 @@
-from .test_base import BaseTestCase
+from .base import BaseTestCase
 from shoutcast_api.tunein import (
     Track, TrackList, get_stations_stream_url, tunein_to_station
 )

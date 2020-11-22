@@ -2,26 +2,26 @@ import requests
 from typing import Tuple
 
 
-def _build_url(limit: (int, Tuple), **kwargs) -> str:
-    url = ""
+def _build_url(limit: (int, Tuple), **kwargs) -> dict:
+    url_params = dict()
     if isinstance(limit, tuple):
         x, y = limit
-        url += '&limit={},{}'.format(x, y)
+        url_params.update(limit='{},{}'.format(x, y))
     elif limit:
-        url += '&limit={}'.format(limit)
+        url_params.update(limit=str(limit))
 
     if kwargs.get('br'):
-        url += "&br={}".format(kwargs.get('br'))
+        url_params.update(br=kwargs.get('br'))
 
     if kwargs.get('mt'):
-        url += "&mt={}".format(kwargs.get('mt'))
+        url_params.update(mt=kwargs.get('mt'))
 
     if kwargs.get('genre_id'):
-        url += "&genre_id={}".format(int(kwargs.get('genre_id')))
+        url_params.update(genre_id=kwargs.get('genre_id'))
 
     if kwargs.get('genre'):
-        url += "&genre={}".format(int(kwargs.get('genre')))
-    return url
+        url_params.update(genre=kwargs.get('genre'))
+    return url_params
 
 
 def station_xml_strip(station):
